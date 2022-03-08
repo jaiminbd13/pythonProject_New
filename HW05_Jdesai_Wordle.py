@@ -1,4 +1,5 @@
 import random
+import logging
 class wordle:
 
     def get_input_from_user(trial):
@@ -13,6 +14,14 @@ class wordle:
 def has_user_guessed_the_right_word(word, codeword):
     return word == codeword
 
+def log_to_file(level, message):
+    logging.basicConfig(filename='app.log', filemode='a+', format='%(levelname)s - %(message)s', level=logging.DEBUG)
+    if level == 'info':
+        logging.info(message)
+    elif level == 'error':
+        logging.error(message)
+    else:
+        logging.warning(message)
 
 def get_spot_name(spot_val):
     if spot_val:

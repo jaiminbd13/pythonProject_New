@@ -3,10 +3,6 @@ import logging
 logging.basicConfig(filename='gameplay.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s')
 f = open('words.txt', 'r')
 
-a = 5
-b = 0
-
-
 def test1_get_word(self):
     logging.basicConfig(level=logging.DEBUG)
     logging.debug('This will get logged')
