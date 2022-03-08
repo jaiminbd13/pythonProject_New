@@ -14,6 +14,7 @@ def main():
 
         if not check_if_entered_word_is_valid(user_word):
             print('Please enter a 5-letter word!')
+
             continue
 
         if has_user_guessed_the_right_word(user_word, codeword):
